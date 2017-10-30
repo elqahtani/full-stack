@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const API_URL = "https://backend-dfzefqaelu.now.sh"
+const API_URL = "http://localhost:8000"
 
 class App extends Component {
   constructor (props) {
@@ -9,10 +9,10 @@ class App extends Component {
     data: []
   }
 }
-
-  async getInitialState() {
+  async componentWillMount() {
     const RESPONSE = await fetch(API_URL)
     const DATA = await RESPONSE.json()
+    console.log(API_URL)
     console.log(DATA)
     this.setState(state => {
       return {
@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <div id = "container">
-        <p> {API_URL} </p>
+        <p> {JSON.stringify(this.state.data) } </p>
       </div>
     )
   }

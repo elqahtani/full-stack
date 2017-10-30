@@ -12,12 +12,8 @@ class App extends Component {
   async componentWillMount() {
     const RESPONSE = await fetch(API_URL)
     const DATA = await RESPONSE.json()
-    console.log(API_URL)
-    console.log(DATA)
-    this.setState(state => {
-      return {
+    this.setState ({
         data: DATA
-      }
     })
   }
 

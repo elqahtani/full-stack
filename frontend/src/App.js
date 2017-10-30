@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const API_URL = "https://backend-geexplgymg.now.sh"
+const API_URL = "https://backend-egnveufdwx.now.sh"
 
 class App extends Component {
   constructor (props) {

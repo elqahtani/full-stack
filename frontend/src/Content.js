@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Button } from 'reactstrap';
+import User from './User'
 
 
 export default class Class extends Component {
@@ -8,15 +8,7 @@ export default class Class extends Component {
     return (
       <div>
         {this.props.data.map(user => {
-          return (
-            <div key={user.id}>
-            <br/>
-              <h1>{user.username}</h1>
-              <h2>{user.name}</h2>
-              <h3>{user.email}</h3>
-              <Button color = "Danger">Danger!</Button>
-            </div>
-          );
+          return <User user={user} />
         })}
       </div>
     );

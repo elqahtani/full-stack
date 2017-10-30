@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import Content from "./Content"
 
+import Header from "./Header"
+
 const API_URL = "https://backend-egnveufdwx.now.sh"
 
 export default class App extends Component {
@@ -21,7 +23,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <div id = "container">
+      <div id = "container" className = "container">
+        <Header/>
         <Content data = {this.state.data} />
       </div>
     )
